@@ -14,9 +14,9 @@ body{
 .form{
     width: 100%;
 }
-.list{
+.container .box .list{
     display: none;
-    justify-content: space-between;
+   
 }
 /* Main container for centering content */
 .container{
@@ -53,7 +53,18 @@ header p{
 
 }
 h1{
+    margin-top: 20px;
     color: rgb(72, 72, 187);
+}
+
+.btn{
+    width: 100%;
+    background-color: rgb(111, 135, 189);
+      text-decoration: none;
+    /* text-align: left; */
+     font-size: 20px;
+       padding: 11px;
+       color:#CFDBEA
 }
 h1,button,p{
   
