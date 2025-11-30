@@ -146,7 +146,7 @@ h1,button,p{
         font-size: 12px;
     }
     
-    /* Stack table headers for very small screens */
+    /* for very small screens */
     @media screen and (max-width: 480px) {
         .list thead {
             display: none;

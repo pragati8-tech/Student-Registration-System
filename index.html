@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Document metadata and settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
     <title>Student-Registration-System</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <div class="box">
-        <header>
-        
-        <h1>Student Registration System</h1>
-        <p class="info">Manage student enrollments and academic records.</p>
-     </header>
-     <form action="" class="form">
-        <label for="name">Student Name:</label>
-        <input type="text" class="input name" placeholder="Student Name" required>
-         
+            <header>
 
-        <label for="stdId">Student ID:</label>
-        <input type="number" class="input stdId" placeholder="Student ID" required>
-      
+                <h1>Student Registration System</h1>
+                <!-- Subtitle/description -->
+                <p class="info">Manage student enrollments and academic records.</p>
+            </header>
+            <!-- Student registration form -->
+            <form action="" class="form">
+                <!-- Student name input field -->
+                <label for="name">Student Name:</label>
+                <input type="text" class="input name" placeholder="Student Name" required>
 
-        <label for="emailId">Email ID:</label>
-        <input type="email" class="input emailId" placeholder="Email ID " required>
-        
 
-        <label for="contact">Contact:</label>
-        <input type="tel" class="input contact" maxlength="10" placeholder="Contact" required>
-        
-          
-      
-<button type="button" class="btn submit">Submit</button>
-    
+                <label for="stdId">Student ID:</label>
+                <input type="number" class="input stdId" placeholder="Student ID" required>
 
-    </form>
-  
-           <table class="list" id="stdlist">
-        <thead>
-            <tr>
-                <th>Student Name</th>
-                <th>Student ID</th>
-                <th>Email ID</th>
-                <th>Contact</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody id="table">
 
-        </tbody>
-    </table>
-    </div>
+                <label for="emailId">Email ID:</label>
+                <input type="email" class="input emailId" placeholder="Email ID " required>
+
+
+                <label for="contact">Contact:</label>
+                <input type="tel" class="input contact" maxlength="10" placeholder="Contact" required>
+
+                <button type="button" class="btn submit">Submit</button>
+            </form>
+            <table class="list" id="stdlist">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Email ID</th>
+                        <th>Contact</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <!-- Table body where student data will be dynamically inserted -->
+                <tbody id="table">
+                <!-- JavaScript will populate this section with student records -->
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
+
 </html>
