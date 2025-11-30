@@ -73,7 +73,7 @@ h1,button,p{
 /* Form link styling */
 .form {
     display: block;
-    text-align: center;
+    text-align: left;
     margin-top: 24px;
     text-decoration: none;
     font-weight: 600;
