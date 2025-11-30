@@ -8,10 +8,10 @@ const table = document.querySelector('.list')
 const info = document.querySelector('.info')
 const tableBody = document.getElementById('table')
 
-// Page load पर students load करें
+// loading the  Page  on students load 
 document.addEventListener('DOMContentLoaded', loadStudents);
 
-// Submit button का event
+// events Submit button
 submit.onclick = (e) => {
     e.preventDefault();
     
@@ -21,7 +21,7 @@ submit.onclick = (e) => {
         return;
     }
     
-    // Student data collect करें
+    // collect to Student data
     const studentData = {
         name: inputName.value,
         studentId: studentId.value,
@@ -32,15 +32,15 @@ submit.onclick = (e) => {
     // Save to localStorage
     saveStudent(studentData);
     
-    // Table में display करें
+    // display Table
     displayStudent(studentData);
     
-    // Form hide करें और table show करें
+    //  hiding Form and show table
     form.style.display = 'none';
     table.style.display = 'table';
     info.innerText = 'Student Information';
     
-    // Form reset करें
+    // reset Form
     form.reset();
 }
 
@@ -65,26 +65,26 @@ function validateForm() {
     return true;
 }
 
-// Student को localStorage में save करें
+// saving Student to localStorage
 function saveStudent(student) {
     let students = JSON.parse(localStorage.getItem('students')) || [];
     students.push(student);
     localStorage.setItem('students', JSON.stringify(students));
 }
 
-// Page load पर students load करें
+// when Page is loading then students load
 function loadStudents() {
     let students = JSON.parse(localStorage.getItem('students')) || [];
     students.forEach(student => displayStudent(student));
     
-    // Agar students hain toh table show karen
+    // when students is here then showing table
     if (students.length > 0) {
         table.style.display = 'table';
         info.innerText = 'Student Information';
     }
 }
 
-// Student को table में display करें
+// Student's table display
 function displayStudent(student) {
     const row = document.createElement('tr');
     
@@ -104,35 +104,35 @@ function displayStudent(student) {
     tableBody.appendChild(row);
 }
 
-// Student delete करें
+// delete Student
 function deleteStudent(studentId) {
     let students = JSON.parse(localStorage.getItem('students')) || [];
     students = students.filter(student => student.studentId !== studentId);
     localStorage.setItem('students', JSON.stringify(students));
     
-    // Table refresh करें
+    // refresh Table
     tableBody.innerHTML = '';
     loadStudents();
 }
 
-// Student edit करें (basic implementation)
+// edit Student (basic implementation)
 function editStudent(studentId) {
     let students = JSON.parse(localStorage.getItem('students')) || [];
     let student = students.find(s => s.studentId === studentId);
     
     if (student) {
-        // Form में values fill करें
+        // values filling in form
         inputName.value = student.name;
         studentId.value = student.studentId;
         emailId.value = student.email;
         contact.value = student.contact;
         
-        // Form show करें
+        //showing Form 
         form.style.display = 'block';
         table.style.display = 'none';
         info.innerText = 'Manage student enrollments and academic records.';
         
-        // Old entry delete करें
+        // Old entry delete
         deleteStudent(studentId);
     }
 }

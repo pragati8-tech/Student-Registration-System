@@ -99,3 +99,111 @@ h1,button,p{
     margin-right: 5px;
 }
 
+/* Mobile Devices (590px and below) */
+@media screen and (max-width: 590px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .box {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin: 5px;
+    }
+    
+    header p {
+        font-size: 14px;
+    }
+    
+    input {
+        padding: 10px;
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    .form .submit {
+        font-size: 16px;
+        padding: 8px;
+        margin-top: 15px;
+    }
+    
+    /* Table responsive for mobile */
+    .list {
+        font-size: 12px;
+    }
+    
+    .list th, .list td {
+        padding: 4px;
+        font-size: 12px;
+    }
+    
+    .delete-btn, .edit-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    /* Stack table headers for very small screens */
+    @media screen and (max-width: 480px) {
+        .list thead {
+            display: none;
+        }
+        
+        .list, .list tbody, .list tr, .list td {
+            display: block;
+            width: 100%;
+        }
+        
+        .list tr {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .list td {
+            text-align: right;
+            padding: 8px;
+            position: relative;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .list td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .list td:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+/* Very small mobile devices (360px and below) */
+@media screen and (max-width: 360px) {
+    .box {
+        padding: 15px 10px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+    
+    input {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .form .submit {
+        font-size: 14px;
+        padding: 7px;
+    }
+}
+
