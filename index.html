@@ -11,24 +11,48 @@
     <div class="container">
         <div class="box">
         <header>
+        
         <h1>Student Registration System</h1>
-        <p>Manage student enrollments and academic records.</p>
-    </header>
-    <form action="" class="form">
+        <p class="info">Manage student enrollments and academic records.</p>
+     </header>
+     <form action="" class="form">
         <label for="name">Student Name:</label>
-        <input type="text" class="name" placeholder="Student Name" required>
+        <input type="text" class="input name" placeholder="Student Name" required>
+         <!-- <p class="error">Please set all the field</p> -->
 
         <label for="stdId">Student ID:</label>
-        <input type="number" class="stdId" placeholder="Student ID" required>
+        <input type="number" class="input stdId" placeholder="Student ID" required>
+         <!-- <p class="error">Please set all the field</p> -->
 
         <label for="emailId">Email ID:</label>
-        <input type="email" class="emailId" placeholder="Email ID " required>
+        <input type="email" class="input emailId" placeholder="Email ID " required>
+         <!-- <p class="error">Please set all the field</p>  -->
 
         <label for="contact">Contact:</label>
-        <input type="tel" class="contact" maxlength="10" placeholder="Contact" required>
+        <input type="tel" class="input contact" maxlength="10" placeholder="Contact" required>
+         <!-- <p class="error">Please set all the field</p> -->
+          
+      
+<button type="button" class="btn submit">Submit</button>
+    
 
-        <input type="button" class="btn" value="Submit">
     </form>
+    <!-- Display Section - Task 4 -->
+           <table class="list" id="stdlist">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Email ID</th>
+                <th>Contact</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
     </div>
     </div>
 </body>
