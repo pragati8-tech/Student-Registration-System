@@ -49,3 +49,5 @@ Uses browser's localStorage
 Data persists after page refresh
 
 No server required
+
+GitHub Link - https://pragati8-tech.github.io/Student-Registration-System/
